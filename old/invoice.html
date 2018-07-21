@@ -1,0 +1,135 @@
+
+
+<table style="width: 100%" cellspacing="5" cellpadding="5">
+    <tr>
+        <td>
+            <h3>INDIA PENTECOSTAL CHURCH OF GOD</h3>
+            <p style="line-height:18%">Main Road, Kozhencherry</p>
+            <p style="line-height:18%">Kerala 689 641, India.</p>
+            <p style="line-height:18%">E-mail:  ipcpenielkozhencherry@gmail.com</p>
+            <p style="line-height:18%">E_mail: Kozhencherry@ipcpeniel.com</p>
+            <p style="line-height:18%">Website: www.ipcpeniel.com</p>
+            <p style="line-height:18%">Phone: (+91) 468 231 0159</p>
+        </td>
+
+        <td style="text-align: right; vertical-align: top;">
+            <img src="images/ipcpeniellogo.png" width="100">
+        </td>
+    </tr>
+    <tr style="background-color: #666; color:#fff; text-align: center;">
+        <td colspan="2"> RECIEPT / PAYMENT VOUCHER / INVOICE</td>
+    </tr>
+</table>
+
+<table style="width: 100%" cellspacing="5" cellpadding="5">
+
+    <tr>
+        <td>Member ID : 11000101</td>
+        <td style="text-align: right;">Date : 10 May 2018</td>
+    </tr>
+    <tr>
+        <td>Name : John Jacob</td>
+        <td style="text-align: right;">File No : 12430 <br />Transaction Code: 343343#FD</td>
+    </tr>
+    <tr>
+        <td>Address :  | Parayil House | Kozhencherry</td>
+    </tr>
+</table>
+<table style="width: 100%;border-collapse: collapse;text-align: center;margin-top:2%" cellspacing="5" cellpadding="5" border="1">
+    <tr>
+        <td width="10%">Sl. No</td>
+        <td>A/c code</td>
+        <td>Particulars</td>
+        <td>Amount</td>
+    </tr>
+
+
+    <tr>
+        <td><?php echo ($key+1) ;?></td>
+        <td><?php echo $value['type'] ;?></td>
+        <td style="text-align: left;"><?php if($value['purticulars']!=''){ echo $value['purticulars'];} else { echo $value['fund_name']; } ?></td>
+        <td style="text-align: right;"><?php echo $value['amount'] ;?></td>
+    </tr>
+    <?php $total_amount += $value['amount']; }?>
+    <tr>
+        <td></td>
+        <td></td>
+        <td style="text-align: right;">Total</td>
+        <td style="text-align: right;"><?php echo number_format((float)$total_amount, 2, '.', '');?></td>
+    </tr>
+</table>
+<table style="width: 100%;margin-top: 1%" cellspacing="5" cellpadding="5">
+
+    <tr>
+        <td>Amount in words :<span style="text-transform:capitalize;"><?php echo  displaywords(number_format((float)$total_amount, 2, '.', '')); ?></span></td>
+    </tr>
+
+</table>
+<table style="width: 100%;" cellspacing="5" cellpadding="5">
+    <tr>
+        <td></td>
+        <td style="text-align: right;"><?php echo $pay_slip[0]['user_name'] ;?></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td style="text-align: right;"><?php echo $pay_slip[0]['member_designation'] ;?></td>
+    </tr>
+</table>
+
+
+<?php
+
+
+function displaywords($number){
+   $no = (int)floor($number);
+   $point = (int)round(($number - $no) * 100);
+   $hundred = null;
+   $digits_1 = strlen($no);
+   $i = 0;
+   $str = array();
+   $words = array('0' => '', '1' => 'one', '2' => 'two',
+'3' => 'three', '4' => 'four', '5' => 'five', '6' => 'six',
+'7' => 'seven', '8' => 'eight', '9' => 'nine',
+'10' => 'ten', '11' => 'eleven', '12' => 'twelve',
+'13' => 'thirteen', '14' => 'fourteen',
+'15' => 'fifteen', '16' => 'sixteen', '17' => 'seventeen',
+'18' => 'eighteen', '19' =>'nineteen', '20' => 'twenty',
+'30' => 'thirty', '40' => 'forty', '50' => 'fifty',
+'60' => 'sixty', '70' => 'seventy',
+'80' => 'eighty', '90' => 'ninety');
+$digits = array('', 'hundred', 'thousand', 'lakh', 'crore');
+while ($i < $digits_1) {
+$divider = ($i == 2) ? 10 : 100;
+$number = floor($no % $divider);
+$no = floor($no / $divider);
+$i += ($divider == 10) ? 1 : 2;
+
+
+if ($number) {
+$plural = (($counter = count($str)) && $number > 9) ? 's' : null;
+$hundred = ($counter == 1 && $str[0]) ? ' and ' : null;
+$str [] = ($number < 21) ? $words[$number] .
+" " . $digits[$counter] . $plural . " " . $hundred
+:
+$words[floor($number / 10) * 10]
+. " " . $words[$number % 10] . " "
+. $digits[$counter] . $plural . " " . $hundred;
+} else $str[] = null;
+}
+$str = array_reverse($str);
+$result = implode('', $str);
+
+
+$points = ($point) ?
+"" . $words[floor($point / 10) * 10] . " " .
+$words[$point = $point % 10] : '';
+
+if($points != ''){
+echo $result . "Rupees  " . $points . " Paise Only";
+} else {
+
+echo $result . "Rupees Only";
+}
+
+}
+?>

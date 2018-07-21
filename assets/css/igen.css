@@ -1,0 +1,224 @@
+.top_head{
+    width: 100%;
+    min-height: 60px;
+    background-color:#1b6d85;
+}
+.logo{
+    height: 50px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.igen-nav{
+    padding-top: 5px;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.banner-igen{
+    overflow-x: hidden;
+    width: 100%;
+}
+.navbar-inverse {
+    background-color: #374030 !important;
+    border-color: #1b6d85!important;
+}
+.navbar-igen {
+    background-color: #666;
+    color:#eee;
+    border-radius:0;
+}
+
+.navbar-igen .navbar-nav > li > a {
+    color:#fff;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.navbar-igen .navbar-nav > .active > a, .navbar-nav > .active >      a:hover, .navbar-nav > .active > a:focus {
+    color: #FFF;
+    background-color: transparent;
+}
+
+.navbar-igen .navbar-nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    color: #fff;
+    background-color: #262626;
+}
+
+.navbar-igen .navbar-brand {
+    color :#eee;
+}
+
+.navbar-igen .navbar-toggle {
+    color: #eee;
+    background-color: transparent;
+}
+
+.navbar-igen .icon-bar {
+    background-color: #dcdcdc;
+}
+.hicontentbox{
+    margin-top: 80px;
+    padding-bottom: 80px;
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom:solid #dbdddd 1px;
+
+}
+.hicontent{
+    margin:5px;
+}
+.hicontent-title{
+    font-size: 48px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+.hicontent-smtitle{
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Oxygen', sans-serif;
+}
+.hicontent-smline{
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.hicontent img{
+    width:100%;
+    overflow: hidden;
+}
+.pastors-box{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.pastors-title{
+    font-size: 48px;
+    font-family: 'Dancing Script', cursive;
+}
+.pastors{
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+    display: inline-block;
+}
+.pastor-sig{
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: left;
+}
+.pastor-img{
+    vertical-align:baseline;
+}
+.sepimagebox{
+    margin-top: 40px;
+}
+.sepimage{
+    width: 100%
+}
+.blogonebox{
+    width:96%;
+    padding: 10px 5px 10px 5px;
+    max-height: 600px;
+
+}
+.blogoneimagecase{
+    max-height: 150px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.blogonecontent{
+    width: 100%;
+    max-height: 250px;
+    overflow: hidden;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+.blogonetitle{
+    width: 100%;
+    max-height: 30px;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+.blogonereadmore{
+    width: 100%;
+    max-height: 50px;
+    overflow: hidden;
+    text-align: right;
+}
+.blogonereadmore a {
+    font-size: large;
+    color: #2b669a;
+}
+.blog-box{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.contactbox{
+    position: relative;
+
+}
+.contactdetails{
+    z-index: 1000;
+    background-image:url("../images/contact.png");
+    background-repeat: no-repeat;
+    bottom: 50px;
+    min-height: 500px;
+    min-width: 400px;
+    top: 50px;
+    right: 40px;
+    position: absolute;
+}
+.add-line1{
+    font-size:18px;
+    font-weight: bold;
+    display: block;
+    margin-top: 130px;
+    margin-left: 80px;
+}
+.add-line2{
+    font-size:16px;
+    display: block;
+    margin-top: 10px;
+    margin-left: 80px;
+}
+.add-line3{
+    font-size:18px;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+.add-line4{
+    font-size:16px;
+    display: block;
+    margin-top: 10px;
+    margin-left: 80px;
+}
+.footer{
+    min-height: 175px;
+    background-color: #666666;
+    padding-top: 40px;
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+}
+.footer a{
+    color:#fff;
+    font-size: 28px;
+}
+.cp {
+    color:#fff;
+    font-size: 16px;
+}
+.cp a {
+    color:#fff;
+    font-size: 16px;
+}
